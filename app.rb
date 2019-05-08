@@ -15,10 +15,10 @@ class App < Sinatra::Base
 
   # Code your final two routes here:
   get '/name/:id' do
-  @name = all_the_names.select do |name|
-    name.id == params[:id]
-  end.first
-  erb :'/names/show.html'
-end
+    @name = all_the_names.select do |name|
+      name.id == params[:id]
+    end.first
+    erb :'/names/show.html'
+  end
 
 end
