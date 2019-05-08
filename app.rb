@@ -14,11 +14,9 @@ class App < Sinatra::Base
   end
 
   # Code your final two routes here:
-  get '/name/:id' do
-    @name = all_the_names.select do |name|
-      name.id == params[:id]
-    end.first
-    erb :'/names/show.html'
+  get "goodbye/:name" do
+    @name = params[:name]
+    "Goodbye, #{@name}."
   end
 
 end
